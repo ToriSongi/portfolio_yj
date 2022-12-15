@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+/*공통*/
+* {
+	margin:0; padding:0; box-sizing:border-box;	
+}
+::-webkit-scrollbar {width:0px;}
+html {scroll-behavior:smooth;}
+html, body {
+	font:12pt/160% 'Noto Sans KR' , sans-serif;
+	letter-spacing:-0.75pt;
+}
+img {
+	display:block; max-width:100%;
+}
+a {text-decoration:none;}
+
+
+/*상단 내비게이션*/
+nav {
+	position:fixed; width:100%; z-index:2;
+	padding:20pt 10pt 10pt 10pt;
+	font-weight:700;
+}
+nav.act {background:#262626;}
+
+nav> div {
+	max-width:1490px; margin:auto; display:flex;
+}
+nav p {
+	color:white; font-size:1.2rem;
+	flex:1;
+}
+#menu {}
+#menu a {
+	color:white; margin-left:20pt;
+	text-shadow:0 0 10px black; display:inline-block;
+}
+#menu a:hover, #menu a.act {
+	color:#9aea35;  transform:scale(1.1) translateY(-1px);
+}
+
+/*헤더(배경이미지)*/
+#top {
+	height:100vh;
+	background:url("../images/1page_bg.jpg") no-repeat fixed center top/ cover;
+}
+#top img{position:absolute; z-index:1; left:0; animation:shine 3s infinite linear;}
+
+@keyframes shine{ 
+0% {opacity:0.1; transform:translateY(-40px);}
+50% {opacity:0.9;  transform:translateY(0px);}
+100% {opacity:0.1; transform:translateY(0px);}
+ 
+}
+
+
+#typing {	
+	height:60vh; color:white; text-align:center; line-height:160%;
+	font-size:2.5rem; padding:40vh 1px 0 1px;
+	text-shadow:0 1px 10px black;
+}
+#click {	
+	max-width:100px; margin:auto; margin-top:30vh;
+	text-align:center;
+}
+#click i {
+	font-size:2.5rem; color:white; display:block;
+	animation:upDown 1s infinite;
+}
+@keyframes upDown {
+	from 	{transform:translateY(-10pt); opacity:0;}
+	to 		{transform:translateY(0pt);   opacity:1;}
+}
+
+#click a {color:white;}
+
+
+/*** 공통: About / Portfolio / Event / Contant */
+.area {
+	padding:15vh 0 10vh 0; min-height:100vh;
+}
+
+.area h2 {
+	text-align:center; font-size:3rem; margin-bottom:60pt;
+}
+
+/*About(자기소개)*/
+#about {
+	background:#fddd7a; letter-spacing:0.01em;
+}
+#about img {
+	width:220pt; margin:auto;
+}
+#about> p {
+	max-width:300pt; margin:auto; text-align:center; 
+	padding-top:10px;
+}
+#about mark {
+	background:#fd8637; font-size:1.1rem; font-weight:bold; 
+}
+#about span {
+	transform:translateX(-15px); display:inline-block;
+}
+/*profile / Experiences & Education / skill*/
+#about> div {	
+	max-width:850pt; margin:auto; display:flex;
+}
+#about section	{ }
+#about h3 		{padding:50pt 0  10pt 0;}
+#about p 		{font-size:0.9rem; font-weight:300;}
+
+/*profile*/
+#about section:nth-child(1){
+	flex:1.3; padding-right:20px;
+}
+/*Experiences & Education*/
+#about section:nth-child(2){
+	flex:2; padding-right:20px;
+}
+
+
+
+/***** portfolio *****/
+#portfolio {
+	padding-left:20pt; padding-right:20pt;
+	max-width:1400px; margin:auto; overflow:hidden;
+}
+#portfolio section {display:flex; align-items:center;}
+#portfolio section:not(:first-of-type){
+	min-height:100vh; padding-top:20vh;
+}
+
+#portfolio div {}
+#portfolio div.left {
+	margin-right:50pt; 
+}
+
+#portfolio h3 {
+	font-size:1.8rem; padding-bottom:20pt;
+}
+#portfolio ul {
+	list-style:none; line-height:180%;
+	padding-bottom:25pt;
+}
+#portfolio li {display:flex; padding-bottom:10px;}
+#portfolio li> * {}
+#portfolio b 	{flex:0.15;}
+#portfolio span {flex:0.85; text-align:justify;}
+.button	{display:flex;}
+.button a{ flex:1;
+	border:1px solid #ddd; padding:6pt 10pt; 
+	border-radius:20pt; color:black; font-weight:500;
+	font-size:0.9rem;  margin-bottom:5pt; text-align:center; transition:0.5s;
+}
+.button a:not(:last-child){margin-right:10px;}
+#portfolio a:hover {
+	background:linear-gradient(110deg, black,#f0f1ef); color:white;
+}
+
+
+/*첫번째 포폴 (아래에서 위로 서서히 올라온다) */
+#port1 {
+	padding:10vh 0 17vh 0; transform:translateY(100pt);
+	opacity:0; transition:2s;
+}
+#port1 div.left{flex:1; border:0px solid red;}
+
+#port1.act {transform:translateY(0pt); opacity:1;}
+#port1 img {transform:translateY(-40pt);}
+#port1 div.right{flex:1.4; border:0px solid red;}
+
+/*두번째 포폴*/
+#port2 			{}
+#port2 div.left {transform:translateX(-50vw);   transition:2s; flex:1.3; border:0px solid red;}
+#port2 div.right{transform:translate(50vw, 20pt); transition:2s; flex:1; border:0px solid red;}
+
+#port2.act div.left  {transform:translateX(0);}
+#port2.act div.right {transform:translate(0, 20pt);}
+
+
+/*세번째 포폴*/
+#port3 img {
+	transform:translateY(-40pt);}
+
+#port3 div.left  {transform:scale(0); transition:2s; flex:1;}
+#port3 div.right {transform:scale(0); transition:2s;  flex:1.3;}
+#port3.act div.left  {transform:scale(1);}
+#port3.act div.right {transform:scale(1);}
+
+#port4 {transform:translateY(100pt); opacity:0; transition:2s;}
+#port4 div.left {flex:1.3; }
+#port4 div.right {flex:1;}
+
+#port4.act {transform:translateY(0pt); opacity:1;}
+
+/***** Event ****/
+#event {	
+	max-width:900px; margin:auto;
+}
+#event> div{
+	display:flex; flex-wrap:wrap; justify-content:space-evenly;
+}
+
+/*정사각형 항목들 영역*/
+#event> div> div {
+	width:280px; position:relative; margin-bottom:10px;
+	overflow:hidden;
+}
+
+/*마우스를 대면 투명한 검정바탕이 나타난다*/
+#event> div> div:hover p   {opacity:1;}
+#event> div  img  {transition:0.5s;}
+#event> div> div:hover img {transform:scale(1.1);}
+
+/*투명한 검정바탕*/
+#event> div p {
+	position:absolute; background:rgba(0,0,0, 0.75); 
+	width:100%; height:100%;top:0; color:white;
+	text-align:center; opacity:0; transition:0.5s;
+}
+/*자세히보기*/
+#event> div b {
+	font-weight:300; padding-top:10pt; display:block;
+}
+
+
+/*돋보기모양*/
+#event> div i {
+	font-size:2rem; margin-top:38%; display:block;
+}
+
+
+/***** Contact *****/
+#contact {background:#bec480; color:#26201b}
+
+#contact b {
+	display:block; 
+	font-size:1.1rem; font-weight:400;
+	padding-top:20pt;
+}
+#contact div {	
+	max-width:600px; margin:auto; display:flex;
+	padding-top:10vh;
+}
+#contact section {
+	flex:1; text-align:center;
+}
+#contact i, #contact a.fas {
+	font-size:5rem; color:#ffffff; padding-bottom:10pt;
+}
+#contact a:last-child {color:black;}
+
+
+/*****큰이미지 팝업모달 *****/
+#popup {
+	position:fixed; background:rgba(0,0,0, 0.9); z-index:1;
+	top:0; width:100vw; height:100vh; overflow:auto;  display:none;
+}
+#popup h3 {
+	color:white; text-align:center; padding:15pt;
+}
+#popup img {
+	margin:auto; max-width:1200px; min-width:60%;
+}
+
+/************************************************/
+/*600픽셀이하 넓이에 해당되는 브라우저에서 이 디자인들이 적용됨.
+@media(max-width:800px){
+	nav {padding:10pt 5pt 5pt 5pt;}
+	nav>div {flex-direction:column;}
+	nav p  	{margin-bottom:5pt;}
+	
+	#menu a:first-child {margin-left:0;}
+	#menu a {font-size:0.9rem; }
+	#typing {font-size:2rem;}
+	
+	#about> div {flex-direction:column; padding:0 10pt;}
+	#about img 	{width:200px;}
+	#skill label{width:38%;}
+	#skill progress {width:58%;}
+	
+	#portfolio {padding-left:10px; padding-right:10px;}
+	#portfolio section {flex-direction:column;}
+	#portfolio div.left {margin-right:0;}
+	#portfolio section:nth-of-type(odd) div.left{order:2;}
+	#portfolio section:nth-of-type(odd) div.right{order:1;}
+	#portfolio section:not(:first-child){padding-top:0vh;}
+	#portfolio ul {padding-bottom:10pt;}
+	#portfolio li {flex-direction:column;}	
+	#portfolio a {padding:4pt 6pt 5px 6px;}
+		
+	#port1 {padding-top:0; transform:translateY(0pt); opacity:1;}
+	
+	#port2 {padding-bottom:100pt;}
+	#port2 div.left {transform:translateX(0);}
+	#port2 div.right{transform:translate(0,30pt);}
+	
+	#port3 {padding-top:30vh;}
+	#port3 img {transform:translateY(0pt);}
+	#port3 div.left {padding-top:30pt; transform:scale(1);}
+	#port3 div.right {transform:scale(1);}
+	
+	
+
+	#event> div> div {width:90%;}
+	#event img 	{width:100%;}
+	
+	#contact div {padding-top:6vh;}	
+	
+	#popup img {width:100%;}
+}*/
+
+
+/*휴대폰 기기등 600픽셀이하 작은 디바이스 설정*/
+@media(max-width:600px){
+	nav{padding:10pt 5pt 5pt 5pt;}
+	nav>div{flex-direction:column;}
+	nav p{margin-bottom:5pt;}
+	#menu a:first-child{margin-left:0;}
+	#menu a{font-size:0.9rem;}
+	#typing{font-size:2rem;}	
+	#about>div{flex-direction:column; padding:0 25px;}
+	#about img{width:200px;}
+	#about label{width:40%;}
+	#about progress{width:58%;}
+	
+	#portfolio	{padding-left:10px; padding-right:10px; overflow:hidden;  }
+	#portfolio section	{flex-direction:column; padding-top:0; }
+	#portfolio ul {padding-bottom:10pt;}
+	#portfolio li {flex-direction:column;}
+	#portfolio div.left{margin-right:0;}
+	#portfolio section:not(:first-of-type){padding-top:0vh;}
+	#portfolio section:nth-of-type(odd) div.right{order:1;}
+	#portfolio section:nth-of-type(odd) div.left{order:2;}
+
+	#portfolio a{padding:6pt 8pt;}
+	
+	
+	#port1 {padding-top:0; transition:1.5s; }
+	#port1 div{}
+	#port1 img{transform:translateY(0pt);}
+	#port1.active{opacity:1; transform:translateY(0);}
+
+	#port2{}
+
+	#port2 div.left{transform:translateX(-100vw); transition:1.5s; }
+	#port2 div.right{transform:translate(100vw, 10pt); transition:1.5s; }
+	#port2.active div.left{transform:translateX(0); }
+	#port2.active div.right{transform:translate(0, 10pt);}
+		
+	#port3 {margin-top:60pt; padding-top:60vh; }
+	#port3 img {transform:translateY(0pt);}
+	#port3 div.left {padding-top:30pt; transform:scale(0); transition:1.5s;}
+	#port3 div.right {transform:scale(0); transition:1.5s;}
+	#port3.active div.left  {transform:scale(1);}
+	#port3.active div.right {transform:scale(1);}
+	
+	#port4 {padding-top:0; transition:1.5s; }
+
+	#port4.active{opacity:1; transform:translateY(0);}
+	
+	
+	#event> div> div {width:90%;}
+	#event img 	{width:100%;}
+	
+	#contact div {padding-top:6vh;}	
+	
+	#popup img {width:100%;}
