@@ -194,6 +194,12 @@ nav p {
 
 #port4.act {transform:translateY(0pt); opacity:1;}
 
+#port5 div.left  {transform:scale(0); transition:2s; flex:1;}
+#port5 div.right {transform:scale(0); transition:2s;  flex:1.3;}
+#port5.act div.left  {transform:scale(1);}
+#port5.act div.right {transform:scale(1);}
+
+
 /***** Event ****/
 #event {	
 	max-width:900px; margin:auto;
