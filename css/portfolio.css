@@ -90,7 +90,7 @@ nav p {
 	background:#fddd7a; letter-spacing:0.01em;
 }
 #about img {
-	width:220pt; margin:auto;
+	width:220pt; height:220pt; border-radius:50%; margin:auto;
 }
 #about> p {
 	max-width:300pt; margin:auto; text-align:center; 
