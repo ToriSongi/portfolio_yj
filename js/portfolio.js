@@ -40,11 +40,13 @@ $(document).ready(function(){
 	const port2Top=$("#port2").offset().top-400;
 	const port3Top=$("#port3").offset().top-400;
 	const port4Top=$("#port4").offset().top-400;
+	const port5Top=$("#port5").offset().top-400;
 		
 	const port1Top1=$("#port1").offset().top-600;
 	const port2Top2=$("#port2").offset().top-600;
 	const port3Top3=$("#port3").offset().top-600;
 	const port4Top4=$("#port4").offset().top-600;
+	const port5Top5=$("#port5").offset().top-600;
 	
 	const eventTop = $("#event").offset().top - 400;	
 	const contactTop=$("#contact").offset().top - 200;
@@ -79,6 +81,9 @@ $(document).ready(function(){
 		if(st>=port4Top){
 			$("#port4").addClass("act");
 		}
+		if(st>=port5Top){
+			$("#port5").addClass("act");
+		}
 		
 		if(st>=port1Top1){
 			$("#port1").addClass("active");
@@ -93,6 +98,9 @@ $(document).ready(function(){
 		
 		if(st>=port4Top4){
 			$("#port4").addClass("active");
+		}	
+		if(st>=port5Top5){
+			$("#port5").addClass("active");
 		}
 		
 		if( st>= eventTop && st<contactTop ){
