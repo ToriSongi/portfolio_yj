@@ -113,7 +113,18 @@ $(document).ready(function(){
 		}
 		$("#menu a").eq(pos).addClass('act').siblings().removeClass('act');
 	});
+	
+		//따라다니는 이력서
+	    const xx=$("#resume").position().top;
+
 		
+		$(document).scroll(function(){
+		
+		const yy=$(document).scrollTop();
+		
+		$("#resume").stop().animate({top:xx+yy},250);
+		
+		});	
 		
 		//이벤트이미지를 클릭하면 큰이미지가 나타난다
 	$("#event>div>div").click(function(){

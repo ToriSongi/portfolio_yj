@@ -271,6 +271,14 @@ nav p {
 	margin:auto; max-width:1200px; min-width:60%;
 }
 
+#resume {position:absolute; right:0px; top:30vh; }
+#resume img{width:340px; animation:dessolve 3s infinite linear;}
+@keyframes dessolve{
+	0%{opacity:0.3;}
+	50%{opacity:1;}
+	100%{opacity:0.3;}
+}
+
 /************************************************/
 /*600픽셀이하 넓이에 해당되는 브라우저에서 이 디자인들이 적용됨.
 @media(max-width:800px){
@@ -382,3 +390,4 @@ nav p {
 	#contact div {padding-top:6vh;}	
 	
 	#popup img {width:100%;}
+	
