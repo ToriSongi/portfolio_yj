@@ -90,7 +90,7 @@ nav p {
 	background:#fddd7a; letter-spacing:0.01em;
 }
 #about img {
-	width:220pt; height:220pt; border-radius:50%; margin:auto;
+	width:220pt; width:220pt; border-radius:50%; margin:auto;
 }
 #about> p {
 	max-width:300pt; margin:auto; text-align:center; 
@@ -123,7 +123,7 @@ nav p {
 
 /***** portfolio *****/
 #portfolio {
-	padding-left:20pt; padding-right:20pt;
+	padding-left:20pt; padding-right:10pt;
 	max-width:1400px; margin:auto; overflow:hidden;
 }
 #portfolio section {display:flex; align-items:center;}
@@ -147,7 +147,7 @@ nav p {
 #portfolio li> * {}
 #portfolio b 	{flex:0.15;}
 #portfolio span {flex:0.85; text-align:justify;}
-.button	{display:flex;}
+.button	{display:flex; overflow:hidden;}
 .button a{ flex:1;
 	border:1px solid #ddd; padding:6pt 10pt; 
 	border-radius:20pt; color:black; font-weight:500;
@@ -167,12 +167,12 @@ nav p {
 #port1 div.left{flex:1; border:0px solid red;}
 
 #port1.act {transform:translateY(0pt); opacity:1;}
-#port1 img {transform:translateY(-40pt);}
-#port1 div.right{flex:1.4; border:0px solid red;}
+#port1 img {transform:translateY(-40pt); }
+#port1 div.right{flex:1.8; border:0px solid red;}
 
 /*두번째 포폴*/
 #port2 			{}
-#port2 div.left {transform:translateX(-50vw);   transition:2s; flex:1.3; border:0px solid red;}
+#port2 div.left {transform:translateX(-50vw);   transition:2s; flex:2; border:0px solid red;}
 #port2 div.right{transform:translate(50vw, 20pt); transition:2s; flex:1; border:0px solid red;}
 
 #port2.act div.left  {transform:translateX(0);}
@@ -184,21 +184,22 @@ nav p {
 	transform:translateY(-40pt);}
 
 #port3 div.left  {transform:scale(0); transition:2s; flex:1;}
-#port3 div.right {transform:scale(0); transition:2s;  flex:1.3;}
+#port3 div.right {transform:scale(0); transition:2s;  flex:2}
 #port3.act div.left  {transform:scale(1);}
 #port3.act div.right {transform:scale(1);}
 
 #port4 {transform:translateY(100pt); opacity:0; transition:2s;}
-#port4 div.left {flex:1.3; }
+#port4 div.left {flex:2; }
 #port4 div.right {flex:1;}
 
 #port4.act {transform:translateY(0pt); opacity:1;}
 
+
+
 #port5 div.left  {transform:scale(0); transition:2s; flex:1;}
-#port5 div.right {transform:scale(0); transition:2s;  flex:1.3;}
+#port5 div.right {transform:scale(0); transition:2s;  flex:2;}
 #port5.act div.left  {transform:scale(1);}
 #port5.act div.right {transform:scale(1);}
-
 
 /***** Event ****/
 #event {	
@@ -340,8 +341,9 @@ nav p {
 	#portfolio section:nth-of-type(odd) div.right{order:1;}
 	#portfolio section:nth-of-type(odd) div.left{order:2;}
 
-	#portfolio a{padding:6pt 8pt;}
+	/*#portfolio a{padding:6pt 8pt;}*/
 	
+	.button a {padding:8px 0px;}
 	
 	#port1 {padding-top:0; transition:1.5s; }
 	#port1 div{}
@@ -366,10 +368,17 @@ nav p {
 
 	#port4.active{opacity:1; transform:translateY(0);}
 	
+	#port5 {margin-top:60pt; padding-top:60vh; }
+	#port5 img {transform:translateY(0pt);}
+	#port5 div.left {padding-top:30pt; transform:scale(0); transition:1.5s;}
+	#port5 div.right {transform:scale(0); transition:1.5s;}
+	#port5.active div.left  {transform:scale(1);}
+	#port5.active div.right {transform:scale(1);}
+	
 	
 	#event> div> div {width:90%;}
 	#event img 	{width:100%;}
-	
+	#event h2 {letter-spacing:-0.1pt; font-size:30pt;}
 	#contact div {padding-top:6vh;}	
 	
 	#popup img {width:100%;}

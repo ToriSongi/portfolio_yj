@@ -81,6 +81,7 @@ $(document).ready(function(){
 		if(st>=port4Top){
 			$("#port4").addClass("act");
 		}
+		
 		if(st>=port5Top){
 			$("#port5").addClass("act");
 		}
@@ -98,7 +99,8 @@ $(document).ready(function(){
 		
 		if(st>=port4Top4){
 			$("#port4").addClass("active");
-		}	
+		}
+		
 		if(st>=port5Top5){
 			$("#port5").addClass("active");
 		}
