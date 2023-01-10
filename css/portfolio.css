@@ -272,10 +272,11 @@ nav p {
 }
 
 #resume {position:absolute; right:0px; top:30vh; }
-#resume img{width:340px; animation:dessolve 3s infinite linear;}
+#resume img{width:280px; animation:dessolve 4s infinite linear;}
 @keyframes dessolve{
 	0%{opacity:0.3;}
-	50%{opacity:1;}
+	40%{opacity:1;}
+	60%{opacity:1;}
 	100%{opacity:0.3;}
 }
 
@@ -390,4 +391,4 @@ nav p {
 	#contact div {padding-top:6vh;}	
 	
 	#popup img {width:100%;}
-	
+	#resume img{width:100px;}
