@@ -27,10 +27,8 @@ nav.act {background:#262626;}
 nav> div {
 	max-width:1490px; margin:auto; display:flex;
 }
-nav p {font-family: 'Pacifico', cursive;
-	color:white;  font-size:1.6rem; margin-top:-10px; letter-spacing:0.02em;
-	flex:1;
-}
+nav p {font-family: 'Pacifico', cursive; color:white;  font-size:1.6rem; margin-top:-10px; letter-spacing:0.02em;
+	flex:1;}
 #menu {}
 #menu a {
 	color:white; margin-left:20pt;
